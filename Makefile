@@ -2,6 +2,7 @@ all1: run1 clean1
 all2: run2 clean2
 
 run1:
+	gcc -o check check.c
 	gcc -o forkchecker forkchecker.c
 	sh running.sh
 
@@ -11,6 +12,7 @@ run2:
 	./createfiles2
 	gcc -o OS1_1 OS1_1.c
 	./OS1_1
+	
 
 reset1:
 	rm -rf fork1.txt fork2.txt fork3.txt
